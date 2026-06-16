@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Production output
+dist/
+
+# Configuration and local memory
+.nexus-review/
+.env
+.env.local
+.env.*.local
+
+# Logs and caches
+*.log
+.eslintcache
+.vitest/
+
+# OS files
+.DS_Store
+Thumbs.db

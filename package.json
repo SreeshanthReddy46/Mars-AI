@@ -1,0 +1,38 @@
+{
+  "name": "mars",
+  "version": "1.0.0",
+  "description": "Autonomous Terminal-Based Code Review Agent",
+  "main": "dist/cli.js",
+  "type": "module",
+  "bin": {
+    "mars": "./dist/cli.js",
+    "mars-review": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@google/genai": "^2.8.0",
+    "chalk": "^5.6.2",
+    "commander": "^15.0.0",
+    "diff": "^9.0.0",
+    "dotenv": "^17.4.2",
+    "fast-glob": "^3.3.3",
+    "inquirer": "^14.0.2",
+    "ora": "^9.4.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "ts-morph": "^28.0.0"
+  },
+  "devDependencies": {
+    "@types/diff": "^7.0.2",
+    "@types/inquirer": "^9.0.10",
+    "@types/node": "^25.9.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}
