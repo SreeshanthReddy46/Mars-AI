@@ -1,0 +1,45 @@
+{
+  "name": "myide",
+  "version": "1.0.0",
+  "description": "Production-ready AI-powered CLI IDE tool from scratch",
+  "main": "dist/bin/myide.js",
+  "scripts": {
+    "start": "ts-node bin/myide.ts",
+    "build": "tsc",
+    "package": "pkg dist/bin/myide.js --targets node18-macos-x64,node18-linux-x64,node18-win-x64 --output bin/myide",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.22.0",
+    "commander": "^11.1.0",
+    "ink": "^4.4.1",
+    "ink-text-input": "^5.0.1",
+    "react": "^18.2.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "chokidar": "^3.5.3",
+    "simple-git": "^3.22.0",
+    "glob": "^10.3.10",
+    "diff": "^5.1.0",
+    "js-tiktoken": "^1.0.8",
+    "conf": "^11.0.2",
+    "dotenv": "^16.3.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "@types/node": "^18.19.0",
+    "@types/react": "^18.2.45",
+    "@types/diff": "^5.0.8",
+    "pkg": "^5.8.1"
+  },
+  "bin": {
+    "myide": "./dist/bin/myide.js"
+  },
+  "pkg": {
+    "assets": [
+      "prompts/**/*"
+    ]
+  }
+}
